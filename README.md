@@ -1,26 +1,37 @@
-🚆 IRCTC-Provider
-Overview
-IRCTC-Provider is a Spring Boot REST API for train ticket booking. It allows users to:
-✅ Book tickets by providing passenger details.
-🔍 Retrieve booking details using PNR Number.
-📜 Fetch all passenger records in the system.
+# 🚆 IRCTC-Provider
 
-🔧 Tech Stack
-Backend: Spring Boot (Java)
-Database:MySQL
-Persistence: Spring Data JPA
-Build Tool: Maven
-REST API: Spring Boot Web
-📌 API Endpoints
-Method	Endpoint	Description
-POST	/ticket	Book a new ticket
-GET	/tickets	Fetch all booked tickets
-GET	/passenger/{pnr}	Retrieve details using PNR Number
-🎟️ 1. Book a Ticket
-Request
+## Overview
+IRCTC-Provider is a **Spring Boot REST API** for train ticket booking.  
+It allows users to:  
+✅ **Book tickets** by providing passenger details.  
+🔍 **Retrieve booking details** using **PNR Number**.  
+📜 **Fetch all passenger records** in the system.  
+
+---
+
+## 🔧 Tech Stack
+- **Backend:** Spring Boot (Java)
+- **Database:** MySQL
+- **Persistence:** Spring Data JPA
+- **Build Tool:** Maven
+- **REST API:** Spring Boot Web  
+
+---
+
+## 📌 API Endpoints
+
+| Method  | Endpoint             | Description                         |
+|---------|----------------------|-------------------------------------|
+| POST    | /ticket              | Book a new ticket                   |
+| GET     | /tickets             | Fetch all booked tickets            |
+| GET     | /passenger/{pnr}     | Retrieve details using PNR Number   |
+
+---
+
+## 🎟️ **1. Book a Ticket**
+
+### **Request**
 http
-Copy
-Edit
 POST /ticket
 Content-Type: application/json
 json
@@ -67,7 +78,7 @@ Edit
 }
 🔍 3. Get Ticket by PNR
 Request
-http
+h
 Copy
 Edit
 GET /passenger/1234567890
@@ -136,4 +147,3 @@ This project is open-source under the MIT License.
 
 🔹 Developed by Chaitanya Khowal
 💡 Contributions are welcome! Feel free to fork and enhance this project.
-
