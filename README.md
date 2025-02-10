@@ -31,7 +31,7 @@ It allows users to:
 ## 🎟️ **1. Book a Ticket**
 
 ### **Request**
-http
+```http
 POST /ticket
 Content-Type: application/json
 json
