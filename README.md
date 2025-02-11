@@ -5,7 +5,9 @@ IRCTC-Provider is a **Spring Boot REST API** for train ticket booking.
 It allows users to:  
 ✅ **Book tickets** by providing passenger details.  
 🔍 **Retrieve booking details** using **PNR Number**.  
-📜 **Fetch all passenger records** in the system.  
+📜 **Fetch all passenger records** in the system. 
+🔗 Also, check out the Consumer API that interacts with this Provider:
+👉 CheckMyTrip - Consumer API 
 
 ---
 
