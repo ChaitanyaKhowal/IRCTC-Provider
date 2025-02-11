@@ -163,11 +163,22 @@ mvn spring-boot:run
 
 ---
 
-## 📄 License
-This project is open-source under the **MIT License**.
+## 📜 License
+This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
-## 👨‍💻 Developed by Chaitanya Khowal
-💡 Contributions are welcome! Feel free to **fork** and enhance this project.
+## **Author**
+
+👨‍💻 **Chaitanya Khowal**\
+## 📞 Contact
+- 📧 Email: [chaitanyakhowal8@gmail.com](mailto:chaitanyakhowal8@gmail.com)
+- 💼 LinkedIn: [Chaitanya Khowal](https://www.linkedin.com/in/chaitanyakhowal/)
+- 🐙 GitHub: [ChaitanyaKhowal](https://github.com/ChaitanyaKhowal)
+- 📷 Instagram: [@devil_since.2001](https://www.instagram.com/devil_since.2001/)
+
+---
+🌟 If you like this project, consider giving it a ⭐ on [GitHub](https://github.com/ChaitanyaKhowal/Portfolio-Website)!
+
+
 
