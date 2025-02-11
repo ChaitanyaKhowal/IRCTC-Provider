@@ -1,35 +1,47 @@
-🚆 IRCTC-Provider
-Overview
-IRCTC-Provider is a Spring Boot REST API for train ticket booking.
-It allows users to:
-✅ Book tickets by providing passenger details.
-🔍 Retrieve booking details using PNR Number.
-📜 Fetch all passenger records in the system.
+# 🚆 IRCTC-Provider
 
-🔗 Also, check out the Consumer API that interacts with this Provider:
-👉 CheckMyTrip - Consumer API
+## Overview
+IRCTC-Provider is a **Spring Boot REST API** for train ticket booking.  
+It allows users to:  
+✅ **Book tickets** by providing passenger details.  
+🔍 **Retrieve booking details** using **PNR Number**.  
+📝 **Fetch all passenger records** in the system.  
 
-🔧 Tech Stack
-Backend: Spring Boot (Java)
-Database: MySQL
-Persistence: Spring Data JPA
-Build Tool: Maven
-REST API: Spring Boot Web
-📌 API Endpoints
-Method	Endpoint	Description
-POST	/ticket	Book a new ticket
-GET	/tickets	Fetch all booked tickets
-GET	/passenger/{pnr}	Retrieve details using PNR Number
-🎟️ 1. Book a Ticket
-Request
-http
-Copy
-Edit
+---
+
+🔗 **Related Repository**
+This project is a **Provider API**, and there is also a **Consumer API** that interacts with this project.  
+👉 Check out the **[CheckMyTrip - Consumer API](https://github.com/ChaitanyaKhowal/CheckMyTrip-Consumer)** repository.
+
+---
+
+## 🔧 Tech Stack
+- **Backend:** Spring Boot (Java)
+- **Database:** MySQL
+- **Persistence:** Spring Data JPA
+- **Build Tool:** Maven
+- **REST API:** Spring Boot Web  
+
+---
+
+## 📌 API Endpoints
+
+| **Method** | **Endpoint**          | **Description**                   |
+|-----------|----------------------|-----------------------------------|
+| POST      | `/ticket`            | Book a new ticket                |
+| GET       | `/tickets`           | Fetch all booked tickets         |
+| GET       | `/passenger/{pnr}`   | Retrieve details using PNR Number |
+
+---
+
+## 🎟️ **1. Book a Ticket**
+
+### **Request**
+```http
 POST /ticket
 Content-Type: application/json
-json
-Copy
-Edit
+```
+```json
 {
   "name": "John Doe",
   "email": "john@example.com",
@@ -38,23 +50,26 @@ Edit
   "source": "Mumbai",
   "destination": "Delhi"
 }
-Response
-json
-Copy
-Edit
+```
+
+### **Response**
+```json
 {
   "message": "Ticket Booked Successfully. This is your PNR Number: 1234567890"
 }
-📜 2. Get All Tickets
-Request
-http
-Copy
-Edit
+```
+
+---
+
+## 📝 **2. Get All Tickets**
+
+### **Request**
+```http
 GET /tickets
-Response
-json
-Copy
-Edit
+```
+
+### **Response**
+```json
 {
   "dto": [
     {
@@ -69,16 +84,19 @@ Edit
     }
   ]
 }
-🔍 3. Get Ticket by PNR
-Request
-http
-Copy
-Edit
+```
+
+---
+
+## 🔍 **3. Get Ticket by PNR**
+
+### **Request**
+```http
 GET /passenger/1234567890
-Response (If found)
-json
-Copy
-Edit
+```
+
+### **Response (If found)**
+```json
 {
   "id": 1,
   "name": "John Doe",
@@ -89,17 +107,19 @@ Edit
   "destination": "Delhi",
   "pnrNo": "1234567890"
 }
-Response (If not found)
-json
-Copy
-Edit
+```
+
+### **Response (If not found)**
+```json
 {
   "message": "No Ticket found for PNR : 1234567890"
 }
-📂 Project Structure
-css
-Copy
-Edit
+```
+
+---
+
+## 📂 Project Structure
+```
 IRCTC-Provider
 │── src/main/java/com/irctc
 │   ├── dto/
@@ -115,32 +135,39 @@ IRCTC-Provider
 │   │   ├── PassengerServiceImpl.java
 │── pom.xml
 │── README.md
-🚀 Setup & Installation
-1️⃣ Clone the Repository
-sh
-Copy
-Edit
+```
+
+---
+
+## 🚀 Setup & Installation
+
+### **1. Clone the Repository**
+```sh
 git clone https://github.com/ChaitanyaKhowal/IRCTC-Provider.git
 cd IRCTC-Provider
-2️⃣ Build the Project
-sh
-Copy
-Edit
+```
+
+### **2. Build the Project**
+```sh
 mvn clean install
-3️⃣ Run the Application
-sh
-Copy
-Edit
+```
+
+### **3. Run the Application**
+```sh
 mvn spring-boot:run
-4️⃣ Access the API
-Base URL: http://localhost:8080/
-Example: http://localhost:8080/tickets
-🔗 Related Repository
-This project is a Provider API, and there is also a Consumer API that interacts with this project.
-👉 Check out the CheckMyTrip - Consumer API repository.
+```
 
-📜 License
-This project is open-source under the MIT License.
+### **4. Access the API**
+- **Base URL:** `http://localhost:8080/`
+- **Example:** `http://localhost:8080/tickets`
 
-👨‍💻 Developed by Chaitanya Khowal
-💡 Contributions are welcome! Feel free to fork and enhance this project.
+---
+
+## 📄 License
+This project is open-source under the **MIT License**.
+
+---
+
+## 👨‍💻 Developed by Chaitanya Khowal
+💡 Contributions are welcome! Feel free to **fork** and enhance this project.
+
