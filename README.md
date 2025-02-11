@@ -1,39 +1,30 @@
-# 🚆 IRCTC-Provider
+🚆 IRCTC-Provider
+Overview
+IRCTC-Provider is a Spring Boot REST API for train ticket booking.
+It allows users to:
+✅ Book tickets by providing passenger details.
+🔍 Retrieve booking details using PNR Number.
+📜 Fetch all passenger records in the system.
 
-## Overview
-IRCTC-Provider is a **Spring Boot REST API** for train ticket booking.  
-It allows users to:  
-✅ **Book tickets** by providing passenger details.  
-🔍 **Retrieve booking details** using **PNR Number**.  
-📜 **Fetch all passenger records** in the system. 
 🔗 Also, check out the Consumer API that interacts with this Provider:
-👉 CheckMyTrip - Consumer API 
+👉 CheckMyTrip - Consumer API
 
----
-
-## 🔧 Tech Stack
-- **Backend:** Spring Boot (Java)
-- **Database:** MySQL
-- **Persistence:** Spring Data JPA
-- **Build Tool:** Maven
-- **REST API:** Spring Boot Web  
-
----
-
-## 📌 API Endpoints
-
-| Method  | Endpoint             | Description                         |
-|---------|----------------------|-------------------------------------|
-| POST    | /ticket              | Book a new ticket                   |
-| GET     | /tickets             | Fetch all booked tickets            |
-| GET     | /passenger/{pnr}     | Retrieve details using PNR Number   |
-
----
-
-## 🎟️ **1. Book a Ticket**
-
-### **Request**
-```http
+🔧 Tech Stack
+Backend: Spring Boot (Java)
+Database: MySQL
+Persistence: Spring Data JPA
+Build Tool: Maven
+REST API: Spring Boot Web
+📌 API Endpoints
+Method	Endpoint	Description
+POST	/ticket	Book a new ticket
+GET	/tickets	Fetch all booked tickets
+GET	/passenger/{pnr}	Retrieve details using PNR Number
+🎟️ 1. Book a Ticket
+Request
+http
+Copy
+Edit
 POST /ticket
 Content-Type: application/json
 json
@@ -80,7 +71,7 @@ Edit
 }
 🔍 3. Get Ticket by PNR
 Request
-h
+http
 Copy
 Edit
 GET /passenger/1234567890
@@ -126,26 +117,30 @@ IRCTC-Provider
 │── README.md
 🚀 Setup & Installation
 1️⃣ Clone the Repository
-bash
+sh
 Copy
 Edit
 git clone https://github.com/ChaitanyaKhowal/IRCTC-Provider.git
 cd IRCTC-Provider
 2️⃣ Build the Project
-bash
+sh
 Copy
 Edit
 mvn clean install
 3️⃣ Run the Application
-bash
+sh
 Copy
 Edit
 mvn spring-boot:run
 4️⃣ Access the API
 Base URL: http://localhost:8080/
 Example: http://localhost:8080/tickets
+🔗 Related Repository
+This project is a Provider API, and there is also a Consumer API that interacts with this project.
+👉 Check out the CheckMyTrip - Consumer API repository.
+
 📜 License
 This project is open-source under the MIT License.
 
-🔹 Developed by Chaitanya Khowal
+👨‍💻 Developed by Chaitanya Khowal
 💡 Contributions are welcome! Feel free to fork and enhance this project.
