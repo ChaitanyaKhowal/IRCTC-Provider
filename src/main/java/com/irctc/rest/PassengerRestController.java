@@ -1,12 +1,10 @@
 package com.irctc.rest;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.irctc.dto.PassengerDto;
 import com.irctc.entity.PassengerData;
-import com.irctc.exception.ExceptionInfo;
 import com.irctc.service.PassengerService;
 
 @RestController
@@ -48,20 +45,6 @@ public class PassengerRestController {
 		} else {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No Ticket found for PNR : " + pnr);
 		}
-	}
-
-	@ExceptionHandler(value = Exception.class)
-	public ResponseEntity<ExceptionInfo> ExceptionHandler(Exception e) {
-
-		String message = e.getMessage();
-
-		ExceptionInfo expInfo = new ExceptionInfo();
-		expInfo.setExceptionCode("Ex123");
-		expInfo.setExceptionMessage(message);
-		expInfo.setExceptionDateAndTime(LocalDateTime.now());
-
-		return new ResponseEntity<>(expInfo, HttpStatus.INTERNAL_SERVER_ERROR);
-
 	}
 
 }
